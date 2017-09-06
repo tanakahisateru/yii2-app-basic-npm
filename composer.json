@@ -21,7 +21,6 @@
     "provide": {
         "bower-asset/jquery": "*",
         "bower-asset/jquery.inputmask": "*",
-        "bower-asset/jquery-ui": "*",
         "bower-asset/bootstrap": "*",
         "bower-asset/punycode": "*",
         "bower-asset/typeahead.js": "*",
