@@ -5,10 +5,11 @@
     "type": "project",
     "license": "BSD-3-Clause",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.0",
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "josegonzalez/dotenv": "^3.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -25,6 +26,16 @@
         "bower-asset/punycode": "*",
         "bower-asset/typeahead.js": "*",
         "bower-asset/yii2-pjax": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "./tests/unit"
+        }
     },
     "scripts": {
         "post-install-cmd": [

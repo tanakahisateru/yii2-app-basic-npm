@@ -9,17 +9,23 @@ return [
     'id' => 'basic-tests',
     'basePath' => dirname(__DIR__),  
     'aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
-    ],  
+        '@bower' => '@app/components',
+        '@npm'   => '@app/node_modules',
+    ],
     'language' => 'en-US',
+    'controllerNamespace' => 'app\controllers',
+    'viewPath' => '@app/src/views',
     'components' => [
         'db' => $db,
         'mailer' => [
             'useFileTransport' => true,
         ],
         'assetManager' => [            
-            'basePath' => __DIR__ . '/../web/assets',
+            'basePath' => __DIR__ . '/../public/assets',
+            'bundles' => array_merge(
+                require(__DIR__ . '/assets-default.php'),
+                require(__DIR__ . '/assets-extended.php')
+            ),
         ],
         'urlManager' => [
             'showScriptName' => true,

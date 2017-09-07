@@ -40,4 +40,9 @@ if (YII_ENV_DEV) {
     ];
 }
 
+Yii::$container->set('yii\console\controllers\ServeController', [
+    'docroot' => '@app/public',
+    'port' => 8080,
+]);
+
 return $config;

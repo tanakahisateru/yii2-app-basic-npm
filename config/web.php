@@ -11,6 +11,8 @@ $config = [
         '@bower' => '@app/components',
         '@npm'   => '@app/node_modules',
     ],
+    'controllerNamespace' => 'app\controllers',
+    'viewPath' => '@app/src/views',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -28,6 +30,7 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
+            'viewPath' => '@app/resources/mail',
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
@@ -43,14 +46,12 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
         'assetManager' => [
             'bundles' => array_merge(
                 require(__DIR__ . '/assets-default.php'),
