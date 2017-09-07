@@ -18,6 +18,7 @@ return [
     'components' => [
         'db' => $db,
         'mailer' => [
+            'viewPath' => '@app/src/mail',
             'useFileTransport' => true,
         ],
         'assetManager' => [            
